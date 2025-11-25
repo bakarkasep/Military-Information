@@ -2,7 +2,8 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
 
     <!-- TAMBAHAN UNTUK PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -24,6 +25,11 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
       }
 
       body {
@@ -283,7 +289,121 @@
         padding: 1rem 0;
       }
 
-      /* Responsive */
+      /* ===== MOBILE RESPONSIVE FIXES ===== */
+      
+      /* Text wrapping fixes */
+      .text-fix {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      /* Mobile First Responsive */
+      @media (max-width: 768px) {
+        .container {
+          padding-right: 10px;
+          padding-left: 10px;
+          max-width: 100%;
+        }
+        
+        /* Navbar Mobile */
+        .navbar {
+          padding: 0.5rem;
+        }
+        
+        .navbar-brand {
+          font-size: 1.1rem;
+        }
+        
+        .nav-link {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+        
+        /* Hero Section Mobile */
+        .display-4 {
+          font-size: 1.8rem !important;
+          line-height: 1.3;
+        }
+        
+        .lead {
+          font-size: 1rem !important;
+        }
+        
+        .btn-lg {
+          padding: 0.4rem 0.8rem;
+          font-size: 1rem;
+        }
+        
+        .py-5 {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem !important;
+        }
+        
+        /* Card Section Mobile */
+        .col-md-4 {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+        
+        .card {
+          margin: 0.5rem 0;
+        }
+        
+        .card-title {
+          font-size: 1.1rem;
+        }
+        
+        .card-text {
+          font-size: 0.9rem;
+        }
+        
+        /* Better spacing */
+        .my-5 {
+          margin-top: 2rem !important;
+          margin-bottom: 2rem !important;
+        }
+        
+        .mb-4 {
+          margin-bottom: 1rem !important;
+        }
+      }
+
+      /* Extra Small Devices */
+      @media (max-width: 576px) {
+        .container {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
+        
+        .display-4 {
+          font-size: 1.5rem !important;
+        }
+        
+        .navbar-brand {
+          font-size: 1rem;
+        }
+        
+        /* Better text sizing */
+        body {
+          font-size: 14px;
+        }
+        
+        h1 { font-size: 1.5rem; }
+        h2 { font-size: 1.3rem; }
+        h3 { font-size: 1.1rem; }
+        
+        .btn {
+          font-size: 0.9rem;
+          padding: 0.3rem 0.6rem;
+        }
+        
+        .card-body {
+          padding: 0.75rem;
+        }
+      }
+
+      /* Desktop Responsive */
       @media (min-width: 576px) {
         .container {
           max-width: 540px;
@@ -371,34 +491,33 @@
     <!-- Hero Section -->
     <section class="text-center text-white py-5 bg-dark">
       <div class="container">
-        <h1 class="display-4 fw-bold">
+        <h1 class="display-4 fw-bold text-fix">
           Selamat Datang di Military Information
         </h1>
-        <p class="lead mt-3">
+        <p class="lead mt-3 text-fix">
           Kami memberikan Informasi terbaik untuk kebutuhan bisnis Militer Anda.
         </p>
-        <a href="about.html" class="btn btn-primary btn-lg mt-3"
-          >Pelajari Lebih Lanjut</a
-        >
+        <a href="about.html" class="btn btn-primary btn-lg mt-3">
+          Pelajari Lebih Lanjut
+        </a>
       </div>
     </section>
 
     <!-- Card Section -->
     <section class="container my-5">
-      <h2 class="text-center mb-4">Layanan Kami</h2>
+      <h2 class="text-center mb-4 text-fix">Layanan Kami</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 shadow">
             <img
               src="Harimau Medium Tank.jpg"
               class="card-img-top"
-              alt="Layanan 1"
+              alt="Konsultasi Bisnis"
             />
             <div class="card-body">
-              <h5 class="card-title">Konsultasi Bisnis</h5>
-              <p class="card-text">
-                Membantu Anda merancang strategi untuk meningkatkan
-                profitabilitas.
+              <h5 class="card-title text-fix">Konsultasi Bisnis</h5>
+              <p class="card-text text-fix">
+                Membantu Anda merancang strategi untuk meningkatkan profitabilitas.
               </p>
               <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
             </div>
@@ -406,10 +525,10 @@
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow">
-            <img src="Sukhoi Su-30.jpg" class="card-img-top" alt="Layanan 2" />
+            <img src="Sukhoi Su-30.jpg" class="card-img-top" alt="Pengembangan Alutsista" />
             <div class="card-body">
-              <h5 class="card-title">Pengembangan Alutsista</h5>
-              <p class="card-text">
+              <h5 class="card-title text-fix">Pengembangan Alutsista</h5>
+              <p class="card-text text-fix">
                 Membangun Armada Alutsista profesional dengan teknologi modern.
               </p>
               <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
@@ -418,12 +537,11 @@
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow">
-            <img src="download.jpg" class="card-img-top" alt="Layanan 3" />
+            <img src="download.jpg" class="card-img-top" alt="Dukungan Teknis" />
             <div class="card-body">
-              <h5 class="card-title">Dukungan Teknis</h5>
-              <p class="card-text">
-                Tim kami siap membantu Anda 24 jam dalam menjaga performa
-                sistem.
+              <h5 class="card-title text-fix">Dukungan Teknis</h5>
+              <p class="card-text text-fix">
+                Tim kami siap membantu Anda 24 jam dalam menjaga performa sistem.
               </p>
               <a href="#" class="btn btn-outline-primary">Lihat Detail</a>
             </div>
