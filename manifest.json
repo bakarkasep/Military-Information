@@ -1,25 +1,41 @@
 {
   "name": "Military Information",
   "short_name": "MilitaryInfo",
-  "description": "Sumber informasi terpercaya untuk teknologi dan strategi militer terkini",
-  "start_url": "/Military-Information/",
-  "scope": "/Military-Information/",
+  "description": "Sumber informasi terpercaya untuk kebutuhan bisnis militer dan alutsista",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#0d6efd",
   "theme_color": "#0d6efd",
   "orientation": "portrait-primary",
+  "scope": "./",
   "lang": "id",
-  "categories": ["business", "education", "military"],
+  "categories": ["business", "military", "information"],
   "icons": [
     {
-      "src": "/Military-Information/imgmanifest/android-chrome-192x192.png",
+      "src": "./imgmanifest/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/Military-Information/imgmanifest/android-chrome-512x512.png",
+      "src": "./imgmanifest/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./imgmanifest/sshp.jpg",
+      "sizes": "640x360",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./imgmanifest/sspc.jpg", 
+      "sizes": "640x480",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
     }
   ]
 }
