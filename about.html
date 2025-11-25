@@ -2,7 +2,8 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
 
     <!-- TAMBAHAN UNTUK PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -24,6 +25,11 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
       }
 
       body {
@@ -176,7 +182,96 @@
         padding: 1rem 0;
       }
 
-      /* Responsive */
+      /* ===== MOBILE RESPONSIVE FIXES ===== */
+      
+      /* Text wrapping fixes */
+      .text-fix {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      /* Mobile First Responsive */
+      @media (max-width: 768px) {
+        .container {
+          padding-right: 10px;
+          padding-left: 10px;
+          max-width: 100%;
+        }
+        
+        /* Navbar Mobile */
+        .navbar {
+          padding: 0.5rem;
+        }
+        
+        .navbar-brand {
+          font-size: 1.1rem;
+        }
+        
+        .nav-link {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+        
+        /* Content Mobile */
+        .col-md-6 {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+        
+        .py-5 {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem !important;
+        }
+        
+        .lead {
+          font-size: 1rem !important;
+        }
+        
+        h1 {
+          font-size: 1.8rem !important;
+        }
+        
+        /* Better spacing */
+        .mb-4 {
+          margin-bottom: 1rem !important;
+        }
+        
+        .row.align-items-center {
+          align-items: flex-start !important;
+        }
+      }
+
+      /* Extra Small Devices */
+      @media (max-width: 576px) {
+        .container {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
+        
+        .navbar-brand {
+          font-size: 1rem;
+        }
+        
+        /* Better text sizing */
+        body {
+          font-size: 14px;
+        }
+        
+        h1 { font-size: 1.5rem; }
+        h2 { font-size: 1.3rem; }
+        
+        .lead {
+          font-size: 0.9rem !important;
+        }
+        
+        p {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+      }
+
+      /* Desktop Responsive */
       @media (min-width: 576px) {
         .container {
           max-width: 540px;
@@ -259,7 +354,7 @@
 
     <!-- Content -->
     <section class="container py-5">
-      <h1 class="text-center mb-4">Tentang Kami</h1>
+      <h1 class="text-center mb-4 text-fix">Tentang Kami</h1>
       <div class="row align-items-center">
         <div class="col-md-6">
           <img
@@ -269,18 +364,18 @@
           />
         </div>
         <div class="col-md-6">
-          <p class="lead">
+          <p class="lead text-fix">
             Military Information berdiri sejak tahun 2020 dengan fokus pada
             penyediaan informasi, analisis, dan inovasi teknologi pertahanan
             terkini dari seluruh dunia.
           </p>
-          <p>
+          <p class="text-fix">
             Kami berkomitmen untuk menjadi sumber terpercaya bagi kalangan
             profesional, akademisi, dan pengamat militer dalam memahami
             perkembangan alutsista, strategi pertahanan, serta modernisasi
             militer global.
           </p>
-          <p>
+          <p class="text-fix">
             Dengan dukungan tim ahli dan jaringan informasi yang luas, kami
             terus berupaya menghadirkan data akurat dan wawasan strategis untuk
             mendukung pengambilan keputusan di bidang pertahanan dan keamanan
